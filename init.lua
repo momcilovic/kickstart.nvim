@@ -234,7 +234,7 @@ require('lazy').setup {
   --  This is equivalent to:
   --    require('Comment').setup({})
 
- -- "gc" to comment visual regions/lines
+  -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
   -- Here is a more advanced example where we pass configuration
@@ -730,7 +730,7 @@ require('lazy').setup {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       -- Load the colorscheme here
-      vim.cmd.colorscheme 'tokyonight-night'
+      --vim.cmd.colorscheme 'tokyonight-night'
 
       -- You can configure highlights by doing something like
       vim.cmd.hi 'Comment gui=none'
