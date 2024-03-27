@@ -148,6 +148,9 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Default colorcolumn is 100 characters
+vim.opt.colorcolumn = '100'
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -613,12 +616,17 @@ require('lazy').setup {
       },
       formatters_by_ft = {
         lua = { 'stylua' },
+        markdown = { 'markdownlint' },
         -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
+        python = { 'isort', 'black' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
-        -- javascript = { { "prettierd", "prettier" } },
+        javascript = { { 'prettierd', 'prettier' } },
+        -- Shell
+        --sh = { 'shfmt' },
+        -- YAML
+        yaml = { { 'yamlfmt', 'prettierd' } },
       },
     },
   },
