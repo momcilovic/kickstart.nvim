@@ -602,6 +602,42 @@ require('lazy').setup({
             },
           },
         },
+
+        yamlls = {
+          settings = {
+            yaml = {
+              format = {
+                enable = true,
+              },
+              schemaStore = {
+                url = 'https://www.schemastore.org/api/json/catalog.json',
+                enable = true,
+              },
+              schemas = {
+                ['https://raw.githubusercontent.com/aws/serverless-application-model/main/samtranslator/schema/schema.json'] = 'template.yaml',
+              },
+              customTags = {
+                '!And',
+                '!If',
+                '!Not',
+                '!Equals',
+                '!Or',
+                '!FindInMap sequence',
+                '!Base64',
+                '!Cidr',
+                '!Ref',
+                '!Sub',
+                '!GetAtt',
+                '!GetAZs',
+                '!ImportValue',
+                '!Select',
+                '!Select sequence',
+                '!Split',
+                '!Join sequence',
+              },
+            },
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
@@ -672,7 +708,8 @@ require('lazy').setup({
         -- Shell
         --sh = { 'shfmt' },
         -- YAML
-        yaml = { { 'yamlfmt', 'prettierd' } },
+        -- yaml = { { 'yamlfmt', 'prettierd' } },
+        --yaml = { { 'yamlfmt', 'prettierd' } },
       },
     },
   },
