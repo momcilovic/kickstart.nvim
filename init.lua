@@ -160,6 +160,10 @@ vim.opt.scrolloff = 10
 -- Default colorcolumn is 100 characters
 vim.opt.colorcolumn = '100'
 
+-- Disable codeium globaly - enable using :CodeiumEnable
+-- See: https://github.com/Exafunction/codeium.vim
+vim.g.codeium_enabled = false
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
