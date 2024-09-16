@@ -4,6 +4,6 @@ return {
   priority = 1005,
 
   config = function()
-    require('nightfox').load()
+    --require('nightfox').load()
   end,
 }

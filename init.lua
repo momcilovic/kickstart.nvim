@@ -162,6 +162,35 @@ vim.opt.scrolloff = 10
 -- Default colorcolumn is 100 characters
 vim.opt.colorcolumn = '100'
 
+----
+---- From https://github.com/jonhoo/configs/blob/master/editor/.config/nvim/init.lua
+----
+
+-- never ever folding
+vim.opt.foldenable = false
+vim.opt.foldmethod = 'manual'
+vim.opt.foldlevelstart = 99
+
+-- never show me line breaks if they're not there
+vim.opt.wrap = false
+
+-- always draw sign column. prevents buffer moving when adding/deleting sign
+vim.opt.signcolumn = 'yes'
+-- sweet sweet relative line numbers
+vim.opt.relativenumber = true
+-- and show the absolute line number for the current line
+vim.opt.number = true
+-- keep current content top + left when splitting
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+-- infinite undo!
+-- NOTE: ends up in ~/.local/state/nvim/undo/
+vim.opt.undofile = true
+
+-- show more hidden characters
+-- also, show tabs nicer
+vim.opt.listchars = 'tab:^ ,nbsp:¬,extends:»,precedes:«,trail:•'
+
 -- Disable codeium globaly - enable using :CodeiumEnable
 -- See: https://github.com/Exafunction/codeium.vim
 vim.g.codeium_enabled = false
